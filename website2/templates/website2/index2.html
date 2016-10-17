@@ -1,0 +1,37 @@
+{% load static %}
+<html>
+ <head>
+	<title>{{title_head}}</title>
+	<link rel="stylesheet" type="text/css" 
+	href="{% static 'website2/style2.css' %}" />
+</head>
+ <body>
+	<header>
+		<h5><a href="#" id="logo"><img src="{% static "website2/26a1.png" %}" alt="Voting Station" /></a></h5>
+		<nav>
+			<a href="#" id="menu-icon"></a>
+			<ul>
+				{% for i in heading %}
+				<li><a href="#" >{{i}}</a></li>
+				{% endfor %}
+			</ul>
+		</nav>
+	</header>
+	
+	<div id="content">
+		<img src="{% static "website2/beauty.jpg" %}" alt="My Imag" />
+	</div>
+	<p><h3>
+		This website offers all forms of services which is directly or indirectly related to election.<br >
+		We conduct all kinds and forms of election electronically i.e. voters can fully participate in the election without visiting any polling boot.<br >
+		We also ensure that the election will be conducted without without any form of <b>fraud</b><br >
+		Clicik on the <i>Contact link</i> to contact us.
+	</h3></p><br ><br >
+	<ul class="it">
+		{% for book in book_list %}
+		<li>{{ book.name }}</li>
+		{% endfor %}
+	</ul><br ><br >
+	
+ </body>
+</html>
